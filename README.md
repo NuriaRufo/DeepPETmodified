@@ -25,7 +25,7 @@ In the second part, we find all the code necessary to perform the tests. This ca
   
    - Finally, an inference can be made between the reconstruction results of the model and the traditional methods, also implemented. In this notebook, the                 average errors and the success rate of the test set of all methods will be displayed and a report will be created and saved in the indicated folder.
    
-# PET Reconstrucion
+# PET reconstruction results
 
 
 We encourage the user to test the trained model on the brain phantom test set. To do so, in the infer script, the corresponding directory will be placed and the model DeepPETtrained.h5 will be chosen. These are the results of the reconstruction of the model as well as those of the traditional FBP, ML-EM and regularised ML-EM reconstruction with their corresponding error with regards to the ground truth.
