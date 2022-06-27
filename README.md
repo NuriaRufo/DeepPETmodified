@@ -27,11 +27,10 @@ In the second part, we find all the code necessary to perform the tests. This ca
    
 # PET Reconstrucion
 
+
 We encourage the user to test the trained model on the brain phantom test set. To do so, in the infer script, the corresponding directory will be placed and the model DeepPETtrained.h5 will be chosen. These are the results of the reconstruction of the model as well as those of the traditional FBP, ML-EM and regularised ML-EM reconstruction with their corresponding error with regards to the ground truth.
 
-![6_buenosimo1](https://user-images.githubusercontent.com/108093731/176009025-4f06a524-f2d8-42d5-9e72-59ad5e91bf8a.png)
-
-
+![gitt](https://user-images.githubusercontent.com/108093731/176009549-3ab36020-327a-4e1c-bff8-405450cc0b93.JPG)
 
 References:
 
