@@ -8,29 +8,6 @@ import cv2
 import random
 import tensorflow as tf
 
-def createCircularMask(h, w, center=None, radius=None):
-    #draw a circular mask
-    if center is None: # use the middle of the image
-        center = [int(w/2), int(h/2)]
-    if radius is None: # use the smallest distance between the center and image walls
-        radius = min(center[0], center[1], w-center[0], h-center[1])
-
-    Y, X = np.ogrid[:h, :w]
-    dist_from_center = np.sqrt((X - center[0])**2 + (Y-center[1])**2)
-
-    mask = dist_from_center <= radius
-    return mask
-
-def crop_circle(image, crop_half_width, crop_half_height, mask):
-    #crop the center of an image and draw a circular mask '   
-    h=image.shape[1]
-    w=image.shape[0]
-    center = [int(w/2), int(h/2)]
-    masked_img = image[int(center[0]-crop_half_width):int(center[0]+crop_half_width),int(center[1]-crop_half_height):int(center[1]+crop_half_height)].copy()
-
-    masked_img[~mask] = 0
-
-    return (masked_img)
 
 
 def Aug_Rotate(aug, augNumber):
