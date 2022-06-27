@@ -4,6 +4,14 @@ DeepPET [1] is a Deep Learning method to reconstruct positron emission tomograph
 
 ![Architecture](https://user-images.githubusercontent.com/108093731/175489229-76cfc677-2399-4ca9-9372-343cdb255dd2.png)
 
+
+# Set up environmet
+```
+conda create --name hovernet python=3.7
+conda activate DeepPET_modified
+pip install -r requirements.txt
+ ```
+
 It is organized in two parts:
 
 The first one consists of a series of directories where the images used are stored in NumPy format of size N x 128 x 128 x 1 (N, number of images). Here you can        differentiate between the  datasets you want to use and within them you can find training, validation and test set. In addition, the different trained models can      also be stored here.
