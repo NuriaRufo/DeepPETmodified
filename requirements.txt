@@ -1,0 +1,8 @@
+scikit-image==0.18.1           
+scikit-learn==0.23.2
+scip==1.5.3 
+astra-toolbox==2.1.0 
+tensorflow-gpu==2.8.0 
+matplotlib==3.5.1 
+numpy==1.20.3 
+opencv==4.1.1 
