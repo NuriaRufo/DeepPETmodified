@@ -11,6 +11,8 @@ conda create --name hovernet python=3.7
 conda activate DeepPET_modified
 pip install -r requirements.txt
  ```
+ 
+# Running the code
 
 It is organized in two parts:
 
@@ -22,13 +24,17 @@ In the second part, we find all the code necessary to perform the tests. This ca
   - Train.ipby will be the notebook where, as its name indicates, the training is carried out. To do this, images from the indicated directory are loaded and               Poisson noise is added to them so that the network learns to handle noisy sinograms. Then, it is necessary to indicate the hyperparameters for the training             and very important if you want to use the batch generator to feed the network. Once the model is trained, it is saved in the indicated directory and its               performance is evaluated.
   
    - Finally, an inference can be made between the reconstruction results of the model and the traditional methods, also implemented. In this notebook, the                 average errors and the success rate of the test set of all methods will be displayed and a report will be created and saved in the indicated folder.
+   
+# PET Reconstrucion
 
+We encourage the user to test the trained model on the brain phantom test set. To do so, in the infer script, the corresponding directory will be placed and the model DeepPETtrained.h5 will be chosen. These are the results of the reconstruction of the model as well as those of the traditional FBP, ML-EM and regularised ML-EM reconstruction with their corresponding error with regards to the ground truth.
 
-The work is developed in a Python 3.7 environment where the libraries used are: TensorFlow, NumPy, OpenCv, matplotlib, ASTRA Toolbox.
+![6_buenosimo1](https://user-images.githubusercontent.com/108093731/176009025-4f06a524-f2d8-42d5-9e72-59ad5e91bf8a.png)
+
 
 
 References:
 
-- Original DeepPET: I. Häggström, C. R. Schmidtlein, G. Campanella, and T. J. Fuchs, “DeepPET: A deep encoder–decoder network for directly solving the PET image reconstruction inverse problem,” Medical Image Analysis, vol. 54, pp. 253–262, May 2019, doi: 10.1016/j.media.2019.03.013. 
+- Original DeepPET [1]: I. Häggström, C. R. Schmidtlein, G. Campanella, and T. J. Fuchs, “DeepPET: A deep encoder–decoder network for directly solving the PET image reconstruction inverse problem,” Medical Image Analysis, vol. 54, pp. 253–262, May 2019, doi: 10.1016/j.media.2019.03.013. 
 
 - Iterative reconstruction methods: G. Kontaxakis, “Iterative Image Reconstruction for Clinical PET Using Ordered Subsets, Median Root Prior, and a Web-Based Interface,” Molecular Imaging & Biology, vol. 4, no. 3, pp. 219–231, Jun. 2002, doi: 10.1016/S1536-1632(02)00004-5.
