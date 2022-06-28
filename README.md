@@ -7,7 +7,7 @@ DeepPET [1] is a Deep Learning method to reconstruct positron emission tomograph
 
 # Set up environmet
 ```
-conda create --name hovernet python=3.7
+conda create --name DeepPET_modified python=3.7
 conda activate DeepPET_modified
 pip install -r requirements.txt
  ```
